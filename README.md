@@ -1,7 +1,7 @@
-# Quickstart
+# Deep AutoViML Pipeline for orchest.io
 
-For supportive material, please refer to the [quickstart in our
-docs](https://orchest.readthedocs.io/en/stable/getting_started/quickstart.html) or to our [quickstart
-video](https://www.youtube.com/watch?v=j0nySMu1-DQ) on YouTube.
+Quickstart Build Deep Learning models with a single line of code: [deep_autoviml](https://github.com/AutoViML/deep_autoviml)
 
-![Quickstart Build Deep Learning models with a single line of code: deep_autoviml ](https://pviz.orchest.io/?pipeline=https://github.com/orchest/quickstart/blob/main/california_housing.orchest&v=2)
+Deep AutoViML helps you build tensorflow keras model pipelines in a single line of code. You can now do the same using orchest.io data pipelines with this project example.
+
+![banner](deep_autoviml_orchest.png)
