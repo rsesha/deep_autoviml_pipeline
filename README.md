@@ -1,2 +1,7 @@
-# deep_autoviml_pipeline
-Quick tutorial on orchest.io that shows how to build multiple deep learning models on your data with a single line of code using the popular python library, Deep AutoViML.
+# Quickstart
+
+For supportive material, please refer to the [quickstart in our
+docs](https://orchest.readthedocs.io/en/stable/getting_started/quickstart.html) or to our [quickstart
+video](https://www.youtube.com/watch?v=j0nySMu1-DQ) on YouTube.
+
+![Quickstart Build Deep Learning models with a single line of code: deep_autoviml ](https://pviz.orchest.io/?pipeline=https://github.com/orchest/quickstart/blob/main/california_housing.orchest&v=2)

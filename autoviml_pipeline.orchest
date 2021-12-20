@@ -1,0 +1,145 @@
+{
+    "name": "autoviml-pipeline",
+    "parameters": {},
+    "services": {},
+    "settings": {
+        "auto_eviction": false,
+        "data_passing_memory_size": "1GB"
+    },
+    "steps": {
+        "0ecdafa6-317b-4acd-be73-b69983053501": {
+            "environment": "c56ab762-539c-4cce-9b1e-c4b00300ec6f",
+            "file_path": "display_results.py",
+            "incoming_connections": [
+                "d094b09e-17a6-4bf1-ab59-6ec94b2a1c1d",
+                "b7482596-42b7-47a2-8ea5-523674b1dbc2"
+            ],
+            "kernel": {
+                "display_name": "Python 3",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    978.5264350628843,
+                    360.433333079455
+                ]
+            },
+            "parameters": {},
+            "title": "Display results",
+            "uuid": "0ecdafa6-317b-4acd-be73-b69983053501"
+        },
+        "106bb318-252d-4f94-ba86-c36722dddf41": {
+            "environment": "c56ab762-539c-4cce-9b1e-c4b00300ec6f",
+            "file_path": "load_file.py",
+            "incoming_connections": [],
+            "kernel": {
+                "display_name": "Python 3",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    22.790043572726063,
+                    355.1891122428357
+                ]
+            },
+            "parameters": {
+                "filename": "housingval.csv",
+                "sep": ",",
+                "target": "MedHouseVal"
+            },
+            "title": "Get data",
+            "uuid": "106bb318-252d-4f94-ba86-c36722dddf41"
+        },
+        "41026482-d150-4e10-beb3-5ea7cd583be3": {
+            "environment": "c56ab762-539c-4cce-9b1e-c4b00300ec6f",
+            "file_path": "train_deep_autoviml.py",
+            "incoming_connections": [
+                "c9484b08-9d23-4f1a-96da-c41711d77c09"
+            ],
+            "kernel": {
+                "display_name": "Python 3",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    504,
+                    249.5
+                ]
+            },
+            "parameters": {
+                "keras_model_type": "fast1",
+                "project_name": "deep_autoviml"
+            },
+            "title": "train_deep_autoviml",
+            "uuid": "41026482-d150-4e10-beb3-5ea7cd583be3"
+        },
+        "b7482596-42b7-47a2-8ea5-523674b1dbc2": {
+            "environment": "c56ab762-539c-4cce-9b1e-c4b00300ec6f",
+            "file_path": "test_deep_autoviml.py",
+            "incoming_connections": [
+                "41026482-d150-4e10-beb3-5ea7cd583be3"
+            ],
+            "kernel": {
+                "display_name": "Python 3",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    743,
+                    217.5
+                ]
+            },
+            "parameters": {},
+            "title": "test_deep_autoviml",
+            "uuid": "b7482596-42b7-47a2-8ea5-523674b1dbc2"
+        },
+        "c9484b08-9d23-4f1a-96da-c41711d77c09": {
+            "environment": "c56ab762-539c-4cce-9b1e-c4b00300ec6f",
+            "file_path": "split_data.py",
+            "incoming_connections": [
+                "106bb318-252d-4f94-ba86-c36722dddf41"
+            ],
+            "kernel": {
+                "display_name": "Python 3",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    269.81305028370195,
+                    353.16801619433204
+                ]
+            },
+            "parameters": {},
+            "title": "Preprocessing",
+            "uuid": "c9484b08-9d23-4f1a-96da-c41711d77c09"
+        },
+        "d094b09e-17a6-4bf1-ab59-6ec94b2a1c1d": {
+            "environment": "c56ab762-539c-4cce-9b1e-c4b00300ec6f",
+            "file_path": "train_random_forest.py",
+            "incoming_connections": [
+                "c9484b08-9d23-4f1a-96da-c41711d77c09"
+            ],
+            "kernel": {
+                "display_name": "Python 3",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    687.8604381113583,
+                    449.10930478196144
+                ]
+            },
+            "parameters": {},
+            "title": "train_random_forest",
+            "uuid": "d094b09e-17a6-4bf1-ab59-6ec94b2a1c1d"
+        }
+    },
+    "uuid": "0915b350-b929-4cbd-b0d4-763cac0bb69f",
+    "version": "1.0.0"
+}
