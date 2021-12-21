@@ -10,7 +10,7 @@ target = orchest.get_step_param('target')
 # The "/data" directory is a special directory managed by Orchest
 # to allow data to be persisted and shared across pipelines and
 # even projects.
-print("Loading frile from data folder...")
+print("Loading file from data folder...")
 df_data = pd.read_csv(datapath+filename, sep=sep, header=0)
 if isinstance(target, str):
     targetvar = [target]
