@@ -15,13 +15,20 @@ predictions = deepauto.predict(model, project_name, test_dataset=test,
                                  keras_model_type=keras_model_type, 
                                  cat_vocab_dict=cat_vocab_dict)
 
-from deep_autoviml.utilities.utilities import print_classification_model_metrics, print_regression_model_stats
+from deep_autoviml.utilities.utilities import print_classification_model_stats, print_regression_model_stats
 
 ### You need to display results from various predictions ##
 import numpy as np
 y_preds = np.array([])
 y_pred = np.array([])
-for num, each_target in enumerate(target):
+
+#### convert target to a list to print the results here ###
+if isinstance(target, str):
+    targetvar = [target]
+else:
+    targetvar = target
+
+for num, each_target in enumerate(targetvar):
     if modeltype == 'Regression':
         y_pred = predictions[0]
         print_regression_model_stats(test[each_target].values, y_pred)

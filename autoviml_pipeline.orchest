@@ -45,12 +45,36 @@
                 ]
             },
             "parameters": {
-                "filename": "housingval.csv",
+                "filename": "diabetes.csv",
                 "sep": ",",
-                "target": "MedHouseVal"
+                "target": "Outcome"
             },
             "title": "Get data",
             "uuid": "106bb318-252d-4f94-ba86-c36722dddf41"
+        },
+        "21902c38-d414-4012-9f5c-48d9fd49478c": {
+            "environment": "c56ab762-539c-4cce-9b1e-c4b00300ec6f",
+            "file_path": "train_deepauto.ipynb",
+            "incoming_connections": [
+                "c9484b08-9d23-4f1a-96da-c41711d77c09"
+            ],
+            "kernel": {
+                "display_name": "Python 3 - autoviml",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    508,
+                    130
+                ]
+            },
+            "parameters": {
+                "keras_model_type": "fast",
+                "project_name": "deep_autoviml"
+            },
+            "title": "alt_train",
+            "uuid": "21902c38-d414-4012-9f5c-48d9fd49478c"
         },
         "41026482-d150-4e10-beb3-5ea7cd583be3": {
             "environment": "c56ab762-539c-4cce-9b1e-c4b00300ec6f",
@@ -70,7 +94,7 @@
                 ]
             },
             "parameters": {
-                "keras_model_type": "fast1",
+                "keras_model_type": "fast",
                 "project_name": "deep_autoviml"
             },
             "title": "train_deep_autoviml",

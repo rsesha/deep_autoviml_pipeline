@@ -14,6 +14,7 @@ from deep_autoviml import deep_autoviml as deepauto
 # Retrieve the data from the previous step.
 data = orchest.get_inputs()
 train, test, target = data["split_data"]
+print('Target = %s' %target)
 print(train.shape)
 train.head(1)
 

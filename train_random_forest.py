@@ -12,7 +12,12 @@ preds = [x for x in list(train) if x not in target]
 print("Fitting the model...")
 
 # Fit model. Choose the right model based on target variable type
-if train[target[0]].dtype == float:
+if isinstance(target, str):
+    targetvar = [target]
+else:
+    targetvar = target
+
+if train[targetvar[0]].dtype == float:
     model = RandomForestRegressor()
     modeltype = 'Regression'
 else:
